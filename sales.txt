@@ -7,3 +7,4 @@ Oil,4,150
 Soap,12,35
 Milk,15,25
 banana,5,100
+salt,6,20
