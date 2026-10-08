@@ -6,4 +6,3 @@ Biscuits,20,10
 Oil,4,150
 Soap,12,35
 Milk,15,25
-banana,5,100
