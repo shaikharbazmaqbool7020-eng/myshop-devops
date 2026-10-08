@@ -1,9 +1,1 @@
-item,quantity,price
-Rice,10,60
-Sugar,5,45
-Tea,8,120
-Biscuits,20,10
-Oil,4,150
-Soap,12,35
-Milk,15,25
-Salt,6,20
+Wrong, 0,0
