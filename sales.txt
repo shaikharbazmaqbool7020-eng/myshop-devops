@@ -1,4 +1,4 @@
-item,quantity,price
+name,qty,price
 Rice,10,60
 Sugar,5,45
 Tea,8,120
