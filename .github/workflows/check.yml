@@ -4,9 +4,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
       - name: Show line count
         run: wc -l sales.txt
       - name: Check header exists
-        run: head -1 sales.txt | grep "item.quantity,price"
+        run: head -1 sales.txt | grep "item,quantity,price"
         
