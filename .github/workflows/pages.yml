@@ -1,0 +1,34 @@
+name: check and deploy
+on:
+  push:
+    branches: [main]
+
+permissions: 
+   contents: read
+   pages: write
+   id-token: write
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: checks sales header
+        run: head -1 sales.txt | grep "item,quantity,price"
+      - name: check page has a heading
+        run: grep "<h1>" index,html
+
+deploy:
+  needs: check
+  runs-on: ubuntu-latest
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.psges_url }}
+ steps:  
+  - uses: actions/checkout@v4
+  - uses: actions/configure-pages@v5
+  - uses: actions/upload-pages-artifact@v4
+    with: 
+      path: .
+  - id: deploment
+    uses: actions/deploy-pages@v4    
